@@ -1,0 +1,5 @@
+<map id="disAnalog" name="disAnalog">
+<area shape="rect" id="node1" title="アナログ機能を無効化する関数" alt="" coords="160,31,247,56"/>
+<area shape="rect" id="node2" href="$PIC12F1822_8c.html#ae333b3351e63da959ca986e52324d850" title=" " alt="" coords="5,5,112,31"/>
+<area shape="rect" id="node3" href="$PIC12F1822_8c.html#ae2e5e1fba2eac02c6221fd1ac93eaec8" title="諸々の初期化を行う関数（スキャン式）" alt="" coords="19,55,99,80"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="init_scan" name="init_scan">
+<area shape="rect" id="node1" title="諸々の初期化を行う関数（スキャン式）" alt="" coords="5,56,85,81"/>
+<area shape="rect" id="node2" href="$common_8c.html#aa8c277fdab0cc5bc32555aa51957f23b" title="アナログ機能を無効化する関数" alt="" coords="139,5,225,31"/>
+<area shape="rect" id="node3" href="$PIC12F6XX_8c.html#a6933d56410a79bc99303c7f4f54521ca" title="EEPROMからデータを読み込む関数" alt="" coords="299,56,377,81"/>
+<area shape="rect" id="node4" href="$common_8c.html#a70f6100e4f948b633c942e5c6e4c209a" title="EEPROMの値を読み書きして初期状態を設定する関数" alt="" coords="133,107,231,132"/>
+<area shape="rect" id="node5" href="$PIC12F6XX_8c.html#a64719dac9a22c3c4752c799ffc69b25a" title="EEPROMにデータを書き込む関数" alt="" coords="297,105,379,131"/>
+<area shape="rect" id="node6" href="$common_8c.html#ab1be8587a70ecef36ec9bc5afc406df8" title="LEDを点滅させる関数" alt="" coords="299,155,377,180"/>
+<area shape="rect" id="node7" href="$header_8h.html#ad27f22fae9a2bba28c51ff52680d9b58" title="チャタリングを待つ関数" alt="" coords="279,204,397,229"/>
+</map>
