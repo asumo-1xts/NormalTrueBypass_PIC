@@ -21,8 +21,8 @@
 #pragma config WRT = OFF       // フラッシュ書き込み保護無効
 #pragma config PLLEN = OFF     // 4x PLL無効（INTOSC速度使用）
 #pragma config STVREN = ON  // スタックオーバーフロー / アンダーフローでリセット
-#pragma config BORV = HI    // 電圧低下リセット電圧高設定
-#pragma config LVP = OFF    // 低電圧プログラミング無効
+#pragma config BORV = HI  // 電圧低下リセット電圧高設定
+#pragma config LVP = OFF  // 低電圧プログラミング無効
 
 // ピン割り当て (PIC12F675と互換)
 #define Relay LATAbits.LATA1         //!< Relayピン

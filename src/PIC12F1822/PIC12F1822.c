@@ -18,7 +18,7 @@ __EEPROM_DATA(0, 0, 0, 0, 0, 0, 0, 0);
 // ここは本当に仮の値で、初期値はEEPROMに設定することで変更できる（main.c）
 bool initState = false;  //!< ペダルの初期状態
 bool momentary = false;  //!< モーメンタリ動作の是非
-bool timing = false;     //!< オルタネイト動作時、いつ反転するか
+bool timing = false;  //!< オルタネイト動作時、いつ反転するか
 
 /**
  * @fn      uint8_t eepRead(uint8_t adress)
