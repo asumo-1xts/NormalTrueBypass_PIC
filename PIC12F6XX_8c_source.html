@@ -144,69 +144,69 @@ $(document).ready(function(){initNavTree('PIC12F6XX_8c_source.html',''); initRes
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment">// EEPROMから読み込むグローバル変数</span></div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// ここは本当に仮の値で、初期値はEEPROMに設定することで変更できる（main.c）</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#a0a158f4c519e72d21b1d4f18c31fe16c">   19</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="PIC12F6XX_8c.html#a0a158f4c519e72d21b1d4f18c31fe16c">initState</a> = <span class="keyword">false</span>; </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#ad721e42675ab53a59213ba54882e3e0a">   20</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="PIC12F6XX_8c.html#ad721e42675ab53a59213ba54882e3e0a">momentary</a> = <span class="keyword">false</span>; </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#a20f65ad56869382ed8681b9dd1aa85d6">   21</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="PIC12F6XX_8c.html#a20f65ad56869382ed8681b9dd1aa85d6">timing</a> = <span class="keyword">false</span>;    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#a0a158f4c519e72d21b1d4f18c31fe16c">   19</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="PIC12F6XX_8c.html#a0a158f4c519e72d21b1d4f18c31fe16c">initState</a> = <span class="keyword">false</span>;  </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#ad721e42675ab53a59213ba54882e3e0a">   20</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="PIC12F6XX_8c.html#ad721e42675ab53a59213ba54882e3e0a">momentary</a> = <span class="keyword">false</span>;  </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#a20f65ad56869382ed8681b9dd1aa85d6">   21</a></span><span class="keywordtype">bool</span> <a class="code hl_variable" href="PIC12F6XX_8c.html#a20f65ad56869382ed8681b9dd1aa85d6">timing</a> = <span class="keyword">false</span>;  </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#a6933d56410a79bc99303c7f4f54521ca">   29</a></span>uint8_t <a class="code hl_function" href="PIC12F6XX_8c.html#a6933d56410a79bc99303c7f4f54521ca">eepRead</a>(uint8_t adress) {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  EEADR = adress; <span class="comment">// アドレスを指定</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  RD = 1;         <span class="comment">// 読み込みを開始</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  EEADR = adress;  <span class="comment">// アドレスを指定</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  RD = 1;          <span class="comment">// 読み込みを開始</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <span class="keywordflow">while</span> (RD) {</div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    ;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  }; <span class="comment">// RD==0まで待つ</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordflow">return</span> EEDATA; <span class="comment">// 読み込んだ値を返却</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>  };  <span class="comment">// RD==0まで待つ</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>  <span class="keywordflow">return</span> EEDATA;  <span class="comment">// 読み込んだ値を返却</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>}</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#a64719dac9a22c3c4752c799ffc69b25a">   44</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="PIC12F6XX_8c.html#a64719dac9a22c3c4752c799ffc69b25a">eepWrite</a>(uint8_t adress, uint8_t myData) {</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  WREN = 1; <span class="comment">// 書き込みを許可</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  WREN = 1;  <span class="comment">// 書き込みを許可</span></div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  EEADR = adress;  <span class="comment">// アドレスを指定</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  EEDATA = myData; <span class="comment">// 書き込みたいデータ</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  EECON2 = 0x55;   <span class="comment">// 暗号その1</span></div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  EECON2 = 0xAA;   <span class="comment">// 暗号その2</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  WR = 1;          <span class="comment">// 書き込みをセット</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>  EEADR = adress;   <span class="comment">// アドレスを指定</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>  EEDATA = myData;  <span class="comment">// 書き込みたいデータ</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  EECON2 = 0x55;    <span class="comment">// 暗号その1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  EECON2 = 0xAA;    <span class="comment">// 暗号その2</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  WR = 1;           <span class="comment">// 書き込みをセット</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>  <span class="keywordflow">while</span> (WR) {</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    ;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  }; <span class="comment">// WR==0まで待つ</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>  };  <span class="comment">// WR==0まで待つ</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  WREN = 0; <span class="comment">// 書き込みを禁止</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>  WREN = 0;  <span class="comment">// 書き込みを禁止</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#afc974930d547652821a3588480719d74">   63</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="PIC12F6XX_8c.html#afc974930d547652821a3588480719d74">init_scan</a>() {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_function" href="common_8c.html#aa8c277fdab0cc5bc32555aa51957f23b">disAnalog</a>(); <span class="comment">// アナログ機能を備えている場合は無効化</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <a class="code hl_function" href="common_8c.html#aa8c277fdab0cc5bc32555aa51957f23b">disAnalog</a>();  <span class="comment">// アナログ機能を備えている場合は無効化</span></div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  CMCON = 0x07;  <span class="comment">// コンパレータ     不使用</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  TRISIO = 0x08; <span class="comment">// GP3以外はすべて出力</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  GPIO = 0;      <span class="comment">// 全てのピンをLOWに設定</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>  CMCON = 0x07;   <span class="comment">// コンパレータ     不使用</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>  TRISIO = 0x08;  <span class="comment">// GP3以外はすべて出力</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>  GPIO = 0;       <span class="comment">// 全てのピンをLOWに設定</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>  <span class="comment">// EEPROMからuint8_t型をbool型に変換して読み込む（0:false / 1:true）</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>  <a class="code hl_variable" href="PIC12F6XX_8c.html#a0a158f4c519e72d21b1d4f18c31fe16c">initState</a> = (bool)(<a class="code hl_function" href="PIC12F6XX_8c.html#a6933d56410a79bc99303c7f4f54521ca">eepRead</a>(<a class="code hl_define" href="header_8h.html#ab41963bb62d9c5697770e6849b1bfb4e">eepAdd_initState</a>));</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>  <a class="code hl_variable" href="PIC12F6XX_8c.html#ad721e42675ab53a59213ba54882e3e0a">momentary</a> = (bool)(<a class="code hl_function" href="PIC12F6XX_8c.html#a6933d56410a79bc99303c7f4f54521ca">eepRead</a>(<a class="code hl_define" href="header_8h.html#acb9b45a64797533addac87da1efa4688">eepAdd_momentary</a>));</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>  <a class="code hl_variable" href="PIC12F6XX_8c.html#a20f65ad56869382ed8681b9dd1aa85d6">timing</a> = (bool)(<a class="code hl_function" href="PIC12F6XX_8c.html#a6933d56410a79bc99303c7f4f54521ca">eepRead</a>(<a class="code hl_define" href="header_8h.html#af104142f2fe66a6c5b5c298806d5250f">eepAdd_timing</a>));</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_function" href="common_8c.html#a70f6100e4f948b633c942e5c6e4c209a">setInitState</a>(); <span class="comment">// 初期状態をEEPROMから読み込む</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>  <a class="code hl_function" href="common_8c.html#a70f6100e4f948b633c942e5c6e4c209a">setInitState</a>();  <span class="comment">// 初期状態をEEPROMから読み込む</span></div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>}</div>
 <div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#aabd565d529ade16a49e9776a85836324">   83</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="PIC12F6XX_8c.html#aabd565d529ade16a49e9776a85836324">init_interrupt</a>() {</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_function" href="common_8c.html#aa8c277fdab0cc5bc32555aa51957f23b">disAnalog</a>(); <span class="comment">// アナログ機能を備えている場合は無効化</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>  <a class="code hl_function" href="common_8c.html#aa8c277fdab0cc5bc32555aa51957f23b">disAnalog</a>();  <span class="comment">// アナログ機能を備えている場合は無効化</span></div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  CMCON = 0x07;  <span class="comment">// コンパレータ     不使用</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  TRISIO = 0x08; <span class="comment">// GP3以外はすべて出力</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  GPIO = 0;      <span class="comment">// 全てのピンをLOWに設定</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>  CMCON = 0x07;   <span class="comment">// コンパレータ     不使用</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>  TRISIO = 0x08;  <span class="comment">// GP3以外はすべて出力</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>  GPIO = 0;       <span class="comment">// 全てのピンをLOWに設定</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>  <span class="comment">//=== interruptのための行ここから ===//</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  INTCON |= 0b10001000; <span class="comment">// GIE=1, GPIE=1 (GPIO割り込み有効)</span></div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  IOC3 = 1;             <span class="comment">// GP3のピン変化割り込みを有効化</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  di(); <span class="comment">// とは言ったものの、bypass関数までは割り込み禁止</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>  INTCON |= 0b10001000;  <span class="comment">// GIE=1, GPIE=1 (GPIO割り込み有効)</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>  IOC3 = 1;              <span class="comment">// GP3のピン変化割り込みを有効化</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>  di();  <span class="comment">// とは言ったものの、bypass関数までは割り込み禁止</span></div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>  <span class="comment">//=== interruptのための行ここまで ===//</span></div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>  <a class="code hl_function" href="common_8c.html#a70f6100e4f948b633c942e5c6e4c209a">setInitState</a>();</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>}</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="PIC12F6XX_8c.html#a4e0a46b9474f02713855286ac17dac6d">  106</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="PIC12F6XX_8c.html#a4e0a46b9474f02713855286ac17dac6d">__interrupt</a>() isr(<span class="keywordtype">void</span>) {</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordflow">if</span> (GPIF) {    <span class="comment">// GPIO変化割り込みフラグが立っているか？</span></div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_function" href="common_8c.html#a450f740567f3511eb4075639ee9126db">insideISR</a>(); <span class="comment">// 割り込み処理を実行</span></div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    GPIF = 0;    <span class="comment">// 割り込みフラグをクリア</span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>  <span class="keywordflow">if</span> (GPIF) {     <span class="comment">// GPIO変化割り込みフラグが立っているか？</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <a class="code hl_function" href="common_8c.html#a450f740567f3511eb4075639ee9126db">insideISR</a>();  <span class="comment">// 割り込み処理を実行</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    GPIF = 0;     <span class="comment">// 割り込みフラグをクリア</span></div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>  }</div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
 <div class="ttc" id="aPIC12F6XX_8c_html_a0a158f4c519e72d21b1d4f18c31fe16c"><div class="ttname"><a href="PIC12F6XX_8c.html#a0a158f4c519e72d21b1d4f18c31fe16c">initState</a></div><div class="ttdeci">bool initState</div><div class="ttdoc">ペダルの初期状態</div><div class="ttdef"><b>Definition:</b> <a href="PIC12F6XX_8c_source.html#l00019">PIC12F6XX.c:19</a></div></div>
@@ -219,9 +219,9 @@ $(document).ready(function(){initNavTree('PIC12F6XX_8c_source.html',''); initRes
 <div class="ttc" id="aPIC12F6XX_8c_html_aee16cfba866ffa8dfc54d80de237d055"><div class="ttname"><a href="PIC12F6XX_8c.html#aee16cfba866ffa8dfc54d80de237d055">__EEPROM_DATA</a></div><div class="ttdeci">__EEPROM_DATA(0, 0, 0, 0, 0, 0, 0, 0)</div><div class="ttdoc">EEPROM（0x00~0x07）の初期値を定義するマクロ</div></div>
 <div class="ttc" id="aPIC12F6XX_8c_html_afc974930d547652821a3588480719d74"><div class="ttname"><a href="PIC12F6XX_8c.html#afc974930d547652821a3588480719d74">init_scan</a></div><div class="ttdeci">void init_scan()</div><div class="ttdoc">諸々の初期化を行う関数（スキャン式）</div><div class="ttdef"><b>Definition:</b> <a href="PIC12F6XX_8c_source.html#l00063">PIC12F6XX.c:63</a></div></div>
 <div class="ttc" id="aPIC12F6XX_8h_html"><div class="ttname"><a href="PIC12F6XX_8h.html">PIC12F6XX.h</a></div></div>
-<div class="ttc" id="acommon_8c_html_a450f740567f3511eb4075639ee9126db"><div class="ttname"><a href="common_8c.html#a450f740567f3511eb4075639ee9126db">insideISR</a></div><div class="ttdeci">void insideISR(void)</div><div class="ttdoc">割り込み中に実行される関数</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00189">common.c:189</a></div></div>
-<div class="ttc" id="acommon_8c_html_a70f6100e4f948b633c942e5c6e4c209a"><div class="ttname"><a href="common_8c.html#a70f6100e4f948b633c942e5c6e4c209a">setInitState</a></div><div class="ttdeci">void setInitState(void)</div><div class="ttdoc">EEPROMの値を読み書きして初期状態を設定する関数</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00077">common.c:77</a></div></div>
-<div class="ttc" id="acommon_8c_html_aa8c277fdab0cc5bc32555aa51957f23b"><div class="ttname"><a href="common_8c.html#aa8c277fdab0cc5bc32555aa51957f23b">disAnalog</a></div><div class="ttdeci">void disAnalog(void)</div><div class="ttdoc">アナログ機能を無効化する関数</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00061">common.c:61</a></div></div>
+<div class="ttc" id="acommon_8c_html_a450f740567f3511eb4075639ee9126db"><div class="ttname"><a href="common_8c.html#a450f740567f3511eb4075639ee9126db">insideISR</a></div><div class="ttdeci">void insideISR(void)</div><div class="ttdoc">割り込み中に実行される関数</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00184">common.c:184</a></div></div>
+<div class="ttc" id="acommon_8c_html_a70f6100e4f948b633c942e5c6e4c209a"><div class="ttname"><a href="common_8c.html#a70f6100e4f948b633c942e5c6e4c209a">setInitState</a></div><div class="ttdeci">void setInitState(void)</div><div class="ttdoc">EEPROMの値を読み書きして初期状態を設定する関数</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00072">common.c:72</a></div></div>
+<div class="ttc" id="acommon_8c_html_aa8c277fdab0cc5bc32555aa51957f23b"><div class="ttname"><a href="common_8c.html#aa8c277fdab0cc5bc32555aa51957f23b">disAnalog</a></div><div class="ttdeci">void disAnalog(void)</div><div class="ttdoc">アナログ機能を無効化する関数</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00056">common.c:56</a></div></div>
 <div class="ttc" id="aheader_8h_html_ab41963bb62d9c5697770e6849b1bfb4e"><div class="ttname"><a href="header_8h.html#ab41963bb62d9c5697770e6849b1bfb4e">eepAdd_initState</a></div><div class="ttdeci">#define eepAdd_initState</div><div class="ttdoc">EEPROM内のアドレスその1.</div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00030">header.h:30</a></div></div>
 <div class="ttc" id="aheader_8h_html_acb9b45a64797533addac87da1efa4688"><div class="ttname"><a href="header_8h.html#acb9b45a64797533addac87da1efa4688">eepAdd_momentary</a></div><div class="ttdeci">#define eepAdd_momentary</div><div class="ttdoc">EEPROM内のアドレスその2.</div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00031">header.h:31</a></div></div>
 <div class="ttc" id="aheader_8h_html_af104142f2fe66a6c5b5c298806d5250f"><div class="ttname"><a href="header_8h.html#af104142f2fe66a6c5b5c298806d5250f">eepAdd_timing</a></div><div class="ttdeci">#define eepAdd_timing</div><div class="ttdoc">EEPROM内のアドレスその3.</div><div class="ttdef"><b>Definition:</b> <a href="header_8h_source.html#l00032">header.h:32</a></div></div>
