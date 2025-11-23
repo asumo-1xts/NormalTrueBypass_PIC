@@ -46,3 +46,25 @@ PICマイコン用のソースコード群です。
 PICマイコン間で共通のソースコードは`src`直下に、そうでないものはそのハードウェアの名前の付いたディレクトリに入っています。
 
 `src/header.h`の冒頭で所望のPICマイコンのヘッダーファイルをincludeするだけで、そのPICマイコンが書き込み対象となります。
+
+## `write_hex.*`
+
+書き込みはコマンドラインで完結できます。
+
+以下はPICKIT3でPIC12F675に書き込む際の例です。
+
+### Windows 11
+
+```powershell
+& "C:\Program Files\Microchip\MPLABX\v6.20\mplab_platform\mplab_ipe\ipecmd.exe" --% -P12F675 -TPPK3 -M -F"C:\Users\asumo\MPLABProjects\Lchica\out\Lchica\default.hex"
+```
+
+### Debian 13 (and some other Linux distributions)
+
+```shell
+cd /opt/microchip/mplabx/v6.20/mplab_platform/mplab_ipe
+
+sudo sh ipecmd.sh \
+--% -P12F675 -TPPK3 -M \
+-F"/home/asumo/Remote/NormalTrueBypass_PIC/out/PIC12F675/default.hex"
+```

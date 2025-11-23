@@ -8,3 +8,4 @@ _build
 cmake
 out
 write_hex.ps1
+write_hex.sh
