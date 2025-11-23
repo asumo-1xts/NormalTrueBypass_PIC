@@ -15,16 +15,16 @@ static inline void waitChattering() { __delay_ms(5); }
 /**
  * @fn      void waitPhotoCoupler(void)
  * @brief   フォトカプラの応答を待つ関数
- * @details PC817なら上昇時間4 [us] / 下降時間3 [us]
+ * @details TLP225Aなら上昇時間2 [ms] / 下降時間2 [ms]
  */
-static inline void waitPhotoCoupler() { __delay_us(5); }
+static inline void waitPhotoCoupler() { __delay_ms(3); }
 
 /**
  * @fn      void waitRelay(void)
  * @brief   リレーの応答を待つ関数
  * @details AZ850なら動作時間2 [ms] / 復帰時間1 [ms]
  */
-static inline void waitRelay() { __delay_ms(2); }
+static inline void waitRelay() { __delay_ms(3); }
 
 // その他EEPROM関連
 #define eepAdd_initState 0x00  //!< EEPROM内のアドレスその1
