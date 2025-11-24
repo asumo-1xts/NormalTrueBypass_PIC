@@ -1,4 +1,4 @@
-<h1 align="center"> 
+<h1 align="center">
 NormalTrueBypass_PIC
 </h1>
 
@@ -33,7 +33,7 @@ NormalTrueBypass_PIC
 
 KiCad関連のファイル一式です。
 
-ガーバーファイルは[Release](https://github.com/aSumo-1xts/NormalTrueBypass_PIC/releases)からダウンロードできます。
+ガーバーファイルは[Release](https://github.com/asumo-1xts/NormalTrueBypass_PIC/releases)からダウンロードできます。
 
 ## dir: `src`
 
@@ -41,7 +41,7 @@ PICマイコン用のソースコード群です。
 
 プロジェクト管理の様式はVScode用のMPLAB Extension Packに準拠しています。
 
-コンパイル後のhexファイルは[Release](https://github.com/aSumo-1xts/NormalTrueBypass_PIC/releases)からダウンロードできます。
+コンパイル後のhexファイルは[Release](https://github.com/asumo-1xts/NormalTrueBypass_PIC/releases)からダウンロードできます。
 
 PICマイコン間で共通のソースコードは`src`直下に、そうでないものはそのハードウェアの名前の付いたディレクトリに入っています。
 
