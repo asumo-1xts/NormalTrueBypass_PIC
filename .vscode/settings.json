@@ -3,8 +3,5 @@
     "--compile-commands-dir=${workspaceFolder}/_build/PIC12F1822/default"
   ],
   "mplab.clangd.path": "/opt/microchip/xc8/v3.10/bin/xc8-clangd",
-  "files.associations": {
-    "pic12f6xx.h": "c"
-  },
   "C_Cpp.intelliSenseEngine": "disabled"
 }
