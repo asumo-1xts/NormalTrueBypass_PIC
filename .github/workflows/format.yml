@@ -24,8 +24,8 @@ jobs:
       - name: Run clang-format
         run: |
           sudo apt install clang-format -y
-          clang-format -i -style=file  src/**/*.h  
-          clang-format -i -style=file  src/**/*.c
+          clang-format -i -style=file:"src/.clang-format" src/**/*.h  
+          clang-format -i -style=file:"src/.clang-format" src/**/*.c
       - name: Commit formatted code
         uses: stefanzweifel/git-auto-commit-action@v7.0.0
         with:
