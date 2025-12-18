@@ -1,0 +1,12 @@
+[tasks."writehex"]
+run = '''
+cd /opt/microchip/mplabx/v6.20/mplab_platform/mplab_ipe &&
+sudo sh ipecmd.sh \
+--% -P${usage_arg} -TPPK3 -M \
+-F"/home/asumo/Remote/NormalTrueBypass_PIC/out/PIC${usage_arg}/default.hex"
+'''
+alias = "wh"
+usage = '''
+arg "<arg>" default=""
+'''
+description = "Write default.hex to the PIC device specified by <arg>"
