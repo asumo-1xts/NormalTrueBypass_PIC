@@ -14,6 +14,8 @@ NormalTrueBypass_PIC
 [![KiCad](https://img.shields.io/badge/v8-314CB0?logo=kicad&logoSize=auto&labelColor=gray)](https://downloads.kicad.org/kicad/windows/explore/stable)
 [![MIT](https://img.shields.io/badge/License-MIT-green)](/LICENSE)
 
+<img src="https://github.com/asumo-1xts/NormalTrueBypass_PIC/blob/main/.github/pic.webp?raw=true" width=90% alt="Actual board" />
+
 </div>
 
 ## Features
