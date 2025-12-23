@@ -10,3 +10,18 @@ usage = '''
 arg "<arg>" default=""
 '''
 description = "Write default.hex to the PIC device specified by <arg>"
+
+[tasks."2webp"]
+run = '''
+cd .github && 
+for f in *.${usage_arg}; do 
+    ffmpeg -hide_banner -loglevel error -y -i "$f" \
+    "${f%.${usage_arg}}.webp" && \
+    rm "$f"; 
+done
+'''
+alias = "2w"
+usage = '''
+arg "<arg>" default=""
+'''
+description = "Convert png to webp"

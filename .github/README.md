@@ -14,13 +14,15 @@ NormalTrueBypass_PIC
 [![KiCad](https://img.shields.io/badge/v8-314CB0?logo=kicad&logoSize=auto&labelColor=gray)](https://downloads.kicad.org/kicad/windows/explore/stable)
 [![MIT](https://img.shields.io/badge/License-MIT-green)](/LICENSE)
 
+<img src="https://github.com/asumo-1xts/NormalTrueBypass_PIC/blob/main/.github/pic.webp?raw=true" width=90% alt="Actual board" />
+
 </div>
 
 ## Features
 
 - Selectable operating mode: Alternate or Momentary
-- Set the power-on state: ON or OFF
-- (Option) Selectable timing to switch: when-pressed or when-released
+- Selectable power-on state: ON or OFF
+- Selectable timing to switch: When-pressed or When-released
 - Automatically bypasses if power is accidentally turned off
 
 ## Verified on
@@ -43,6 +45,6 @@ PICマイコン用のソースコード群です。
 
 コンパイル後のhexファイルは[Release](https://github.com/asumo-1xts/NormalTrueBypass_PIC/releases)からダウンロードできます。
 
-PICマイコン間で共通のソースコードは`src`直下に、そうでないものはそのハードウェアの名前の付いたディレクトリに入っています。
+PIC マイコン間で共通のソースコードは`src`直下に、そうでないものはそのハードウェアの名前の付いたディレクトリに入っています。
 
 `src/header.h`の冒頭で所望のPICマイコンのヘッダーファイルをincludeするだけで、そのPICマイコンが書き込み対象となります。
