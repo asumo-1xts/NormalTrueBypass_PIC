@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "microchip.mplab-extension-pack",
+    "microchip.mplab-clangd",
+    "microchip.mplab-extensions-core",
+    "microchip.mplab-extensions-platforms",
+    "microchip.mplab-ui",
+    "microchip.runcmake",
+    "xaver.clang-format",
+    "microchip.toolchains",
+    "microchip.mplab-kconfig",
+    "microchip.mplab-core-da"
+  ]
+}

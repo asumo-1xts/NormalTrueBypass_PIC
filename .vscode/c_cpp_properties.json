@@ -1,0 +1,13 @@
+{
+  "configurations": [
+    {
+      "name": "Win32",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/opt/microchip/xc8/v3.10/pic/include"
+      ],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"]
+    }
+  ],
+  "version": 4
+}

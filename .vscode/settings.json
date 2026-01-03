@@ -1,0 +1,14 @@
+{
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "C_Cpp.intelliSenseEngine": "disabled",
+  "editor.formatOnSave": true,
+  "files.associations": {
+    "*.h": "c"
+  },
+  "mplab.clangd.arguments": [
+    "--compile-commands-dir=${workspaceFolder}/_build/PIC12F1822/default"
+  ],
+  "mplab.clangd.path": "/opt/microchip/xc8/v3.10/bin/xc8-clangd"
+}

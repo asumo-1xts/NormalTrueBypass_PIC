@@ -1,0 +1,10 @@
+KiCad/fp-info-cache
+KiCad/*.kicad_prl
+KiCad/*.kicad_sch.lck
+KiCad/jlcpcb
+KiCad/TrailTrueBypass_PIC-backups
+.vscode/*.backup
+_build
+cmake
+out
+.ssh/
