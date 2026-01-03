@@ -11,12 +11,29 @@ on:
       - ".github/workflows/doxygen.yml"
 
 jobs:
-  deploy:
+  run-doxygen:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - uses: DenverCoder1/doxygen-github-pages-action@v2.0.0
+      - name: Checkout repository
+        uses: actions/checkout@v5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: doxygen
+          ref: main
+          fetch-depth: 0
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+      - name: Install Doxygen
+        run: |
+          sudo apt update
+          sudo apt install doxygen -y
+      - name: Generate Doxygen documentation
+        run: |
+          doxygen Doxyfile
+      - name: Commit Doxygen documentation
+        uses: stefanzweifel/git-auto-commit-action@v7.0.0
+        with:
+          branch: main
+          commit_message: 'docs: Update Doxygen documentation'
+          commit_user_name: 'gh-actions[bot]'
+          commit_user_email: 'action@github.com'
+          commit_author: 'gh-actions[bot] <action@github.com>'
