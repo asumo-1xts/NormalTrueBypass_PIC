@@ -1,5 +1,7 @@
 <h1 align="center">
+
 NormalTrueBypass_PIC
+
 </h1>
 
 <div align="center">
@@ -10,8 +12,10 @@ NormalTrueBypass_PIC
 [![Format code](https://github.com/asumo-1xts/NormalTrueBypass_PIC/actions/workflows/format.yml/badge.svg)](https://github.com/asumo-1xts/NormalTrueBypass_PIC/actions/workflows/format.yml)
 [![Doxygen](https://github.com/aSumo-1xts/NormalTrueBypass_PIC/actions/workflows/doxygen.yml/badge.svg)](https://github.com/aSumo-1xts/NormalTrueBypass_PIC/actions/workflows/doxygen.yml)
 
-[![XC8 - 3.10](https://img.shields.io/static/v1?label=XC8&message=v3.10)](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers)
-[![KiCad](https://img.shields.io/badge/v8-314CB0?logo=kicad&logoSize=auto&labelColor=gray)](https://downloads.kicad.org/kicad/windows/explore/stable)
+[![KiCad](https://img.shields.io/badge/-%23314CB0?style=flat&logo=kicad&logoColor=white&logoSize=auto)](https://downloads.kicad.org/kicad/windows/explore/stable)
+[![XC8](https://img.shields.io/badge/XC8-%23A8B9CC?style=flat&logo=c&logoColor=white)](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers)
+[![Clang-Format](https://img.shields.io/badge/Clang--Format-gray?style=flat)](https://clang.llvm.org/docs/ClangFormat.html)
+[![Doxygen](https://img.shields.io/badge/-%232C4AA8?style=flat&logo=doxygen&logoColor=white&logoSize=auto)](https://www.doxygen.nl/)
 [![MIT](https://img.shields.io/badge/License-MIT-green)](/LICENSE)
 
 <img src="https://github.com/asumo-1xts/NormalTrueBypass_PIC/blob/main/.github/pic.webp?raw=true" width=90% alt="Actual board" />
