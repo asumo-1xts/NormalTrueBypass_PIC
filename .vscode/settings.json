@@ -3,6 +3,8 @@
     "editor.defaultFormatter": "xaver.clang-format"
   },
   "C_Cpp.intelliSenseEngine": "disabled",
+  "clang-format.assumeFilename": "src/.clang-format",
+  "clang-format.fallbackStyle": "Google",
   "editor.formatOnSave": true,
   "files.associations": {
     "*.h": "c"
