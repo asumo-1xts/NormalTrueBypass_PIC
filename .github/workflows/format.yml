@@ -1,4 +1,4 @@
-name: Format code
+name: Clang-Format
 
 on:
   pull_request:
