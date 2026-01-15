@@ -2,16 +2,11 @@
   "[c]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
-  "C_Cpp.intelliSenseEngine": "disabled",
   "clang-format.assumeFilename": "src/.clang-format",
   "clang-format.fallbackStyle": "Google",
-  "editor.formatOnSave": true,
-  "files.associations": {
-    "*.h": "c"
-  },
   "mplab.clangd.arguments": [
-    "--compile-commands-dir=${workspaceFolder}/_build/PIC12F1822/default"
+    "--compile-commands-dir=${workspaceFolder}\\_build\\PIC12F1822\\default"
   ],
-  "mplab.clangd.path": "/opt/microchip/xc8/v3.10/bin/xc8-clangd",
+  "mplab.clangd.path": "c:\\Program Files\\Microchip\\xc8\\v3.10\\bin\\xc8-clangd.exe",
   "mplab.platforms.installUsbDrivers": false
 }
