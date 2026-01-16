@@ -8,10 +8,20 @@ on:
       - "src/**/*.c"
       - "src/**/*.h"
       - "Doxyfile"
+      - "docs/html/**"
       - ".github/workflows/format-docs.yml"
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  format-code:
+  run-format-doxygen:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -20,7 +30,7 @@ jobs:
           ref: main
           fetch-depth: 0
           ssh-key: ${{ secrets.DEPLOY_KEY }}
-      - name: Run clang-format
+      - name: Install and Run clang-format
         run: |
           sudo apt install clang-format -y
           clang-format -i -style=file:"src/.clang-format" src/**/*.h  
@@ -33,25 +43,9 @@ jobs:
           commit_user_name: 'gh-actions[bot]'
           commit_user_email: 'github-actions[bot]@users.noreply.github.com'
           commit_author: 'gh-actions[bot] <github-actions[bot]@users.noreply.github.com>'
-
-  run-doxygen:
-    needs: format-code
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v5
-        with:
-          ref: main
-          fetch-depth: 0
-          ssh-key: ${{ secrets.DEPLOY_KEY }}
-      - name: Install Doxygen
+      - name: Install and Run Doxygen
         run: |
-          sudo apt update
           sudo apt install doxygen -y
-      - name: Generate Doxygen documentation
-        run: |
           doxygen Doxyfile
       - name: Commit Doxygen documentation
         uses: stefanzweifel/git-auto-commit-action@v7.0.0
@@ -61,3 +55,22 @@ jobs:
           commit_user_name: 'gh-actions[bot]'
           commit_user_email: 'action@github.com'
           commit_author: 'gh-actions[bot] <action@github.com>'
+
+  deploy:
+    needs: run-format-doxygen
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "docs/html/"
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
