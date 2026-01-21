@@ -1,6 +1,7 @@
 <h1 align="center">
 
 NormalTrueBypass_PIC
+[![MIT](https://img.shields.io/badge/License-MIT-green)](/LICENSE)
 
 </h1>
 
@@ -9,13 +10,9 @@ NormalTrueBypass_PIC
 **A project for a true-bypass with an DIP8 PIC microcontroller.**
 
 [![KiBot](https://github.com/aSumo-1xts/NormalTrueBypass_PIC/actions/workflows/kibot.yml/badge.svg)](https://github.com/aSumo-1xts/NormalTrueBypass_PIC/actions/workflows/kibot.yml)
-[![Format | Docs](https://github.com/asumo-1xts/NormalTrueBypass_PIC/actions/workflows/format-docs.yml/badge.svg)](https://github.com/asumo-1xts/NormalTrueBypass_PIC/actions/workflows/format-docs.yml)
-
+[![Format | Doc](https://github.com/asumo-1xts/NormalTrueBypass_PIC/actions/workflows/fmt-doc.yml/badge.svg?branch=main)](https://github.com/asumo-1xts/NormalTrueBypass_PIC/actions/workflows/fmt-doc.yml)
 [![KiCad](https://img.shields.io/badge/-%23314CB0?style=flat&logo=kicad&logoColor=white&logoSize=auto)](https://downloads.kicad.org/kicad/windows/explore/stable)
 [![XC8](https://img.shields.io/badge/XC8-%23A8B9CC?style=flat&logo=c&logoColor=white)](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers)
-[![Clang-Format](https://img.shields.io/badge/Clang--Format-gray?style=flat)](https://clang.llvm.org/docs/ClangFormat.html)
-[![Doxygen](https://img.shields.io/badge/-%232C4AA8?style=flat&logo=doxygen&logoColor=white&logoSize=auto)](https://www.doxygen.nl/)
-[![MIT](https://img.shields.io/badge/License-MIT-green)](/LICENSE)
 
 <img src="https://github.com/asumo-1xts/NormalTrueBypass_PIC/blob/main/.github/pic.webp?raw=true" width=90% alt="Actual board" />
 
