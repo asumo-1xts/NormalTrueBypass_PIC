@@ -7,4 +7,6 @@ KiCad/TrailTrueBypass_PIC-backups
 _build
 cmake
 out
+
 .ssh/
+docs/
